@@ -1,0 +1,9 @@
+c:\users\dante\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.exe.config
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.exe
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.pdb
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csprojResolveAssemblyReference.cache
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.Form1.resources
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.Properties.Resources.resources
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csproj.GenerateResource.Cache
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.exe
+C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.pdb
