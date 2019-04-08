@@ -7,3 +7,13 @@ C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILL
 C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csproj.GenerateResource.Cache
 C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.exe
 C:\Users\DANTE\documents\visual studio 2015\Projects\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.pdb
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.exe.config
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.exe
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\bin\Debug\CSHARPGORILLAS.pdb
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csprojAssemblyReference.cache
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.Form1.resources
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.Properties.Resources.resources
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csproj.GenerateResource.cache
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.csproj.CoreCompileInputs.cache
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.exe
+C:\Users\Fer\Documents\GitHub\QBasic-Gorillas\QBasic Gorillas\CSHARPGORILLAS\CSHARPGORILLAS\obj\Debug\CSHARPGORILLAS.pdb
