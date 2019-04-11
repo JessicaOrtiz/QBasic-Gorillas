@@ -106,6 +106,7 @@ namespace CSHARPGORILLAS
 
         }
 
+
         private int posicion(int ii)
         {
             int tam=0;
@@ -117,7 +118,6 @@ namespace CSHARPGORILLAS
             return tam;
         }
 
-        
         private void timer1_Tick(object sender, EventArgs e)
         {
             tiempo++;
@@ -134,6 +134,7 @@ namespace CSHARPGORILLAS
             }
         }
 
+
         private void establece(int num)
         {
             label1.Text = "Turno del jugador" + num.ToString();
@@ -141,18 +142,44 @@ namespace CSHARPGORILLAS
 
             if (num == 2)
             {       
-                label2.Location = new Point(label2.Location.X + 500, label2.Location.Y);
-                textBox1.Location = new Point(textBox1.Location.X + 500, textBox1.Location.Y);
-                label3.Location = new Point(label3.Location.X + 500, label3.Location.Y);
-                textBox2.Location = new Point(textBox2.Location.X + 500, textBox2.Location.Y);
+                label2.Location = new Point(label2.Location.X + 600, label2.Location.Y);
+                textBox1.Location = new Point(textBox1.Location.X + 600, textBox1.Location.Y);
+                label3.Location = new Point(label3.Location.X + 600, label3.Location.Y);
+                textBox2.Location = new Point(textBox2.Location.X + 600, textBox2.Location.Y);
             }
             else
             {             
-                label2.Location = new Point(label2.Location.X - 500, label2.Location.Y);
-                textBox1.Location = new Point(textBox1.Location.X -500, textBox1.Location.Y);
-                label3.Location = new Point(label3.Location.X - 500, label3.Location.Y);
-                textBox2.Location = new Point(textBox2.Location.X - 500, textBox2.Location.Y);
+                label2.Location = new Point(label2.Location.X - 600, label2.Location.Y);
+                textBox1.Location = new Point(textBox1.Location.X -600, textBox1.Location.Y);
+                label3.Location = new Point(label3.Location.X - 600, label3.Location.Y);
+                textBox2.Location = new Point(textBox2.Location.X - 600, textBox2.Location.Y);
             }
+        }
+
+
+        private void pictureA2_Click(object sender, EventArgs e)
+        {   
+                textBox2.Text = 60.ToString();
+        }
+
+        private void pictureA1_Click(object sender, EventArgs e)
+        {    
+                textBox2.Text = 20.ToString();
+        }
+
+        private void pictureA3_Click(object sender, EventArgs e)
+        {      
+                textBox2.Text = 90.ToString();
+        }
+
+        private void pictureA4_Click(object sender, EventArgs e)
+        {          
+                textBox2.Text = 45.ToString();
+        }
+
+        private void picturea5_Click(object sender, EventArgs e)
+        {
+                textBox2.Text = 84.ToString();
         }
     }
 }
