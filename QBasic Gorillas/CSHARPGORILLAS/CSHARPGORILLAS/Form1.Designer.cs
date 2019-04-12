@@ -195,5 +195,6 @@
         private System.Windows.Forms.PictureBox pictureA4;
         private System.Windows.Forms.PictureBox picturea5;
     }
+
 }
 
