@@ -41,6 +41,7 @@
             this.pictureA3 = new System.Windows.Forms.PictureBox();
             this.pictureA4 = new System.Windows.Forms.PictureBox();
             this.picturea5 = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureA1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureA2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureA3)).BeginInit();
@@ -65,7 +66,6 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(144, 107);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
@@ -75,6 +75,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -154,6 +155,10 @@
             this.picturea5.TabStop = false;
             this.picturea5.Click += new System.EventHandler(this.picturea5_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +176,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureA1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureA2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureA3)).EndInit();
@@ -194,6 +200,7 @@
         private System.Windows.Forms.PictureBox pictureA3;
         private System.Windows.Forms.PictureBox pictureA4;
         private System.Windows.Forms.PictureBox picturea5;
+        private System.Windows.Forms.Timer timer2;
     }
 
 }
