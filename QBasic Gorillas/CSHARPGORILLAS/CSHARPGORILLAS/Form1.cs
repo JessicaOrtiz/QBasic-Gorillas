@@ -598,5 +598,30 @@ namespace CSHARPGORILLAS
             
             return 0;
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                Image img;
+                CALCULAR_TIEMPO_DESPLAZAMIENTOX();
+                PictureBox bala = new PictureBox();
+                if (jugador == 2)
+                {
+                    img = Image.FromFile(Directory.GetCurrentDirectory() + @"\Personajes\Bala.png");
+                }
+                else
+                {
+                    img = Image.FromFile(Directory.GetCurrentDirectory() + @"\Personajes\Bala derecha.png");
+                }
+                bala.Name = "bala";
+                bala.Size = new Size(75, 75);
+                bala.Image = new System.Drawing.Bitmap(img);
+                bala.SizeMode = PictureBoxSizeMode.StretchImage;
+                bala.Visible = false;
+                this.Controls.Add(bala);
+                timer2.Start();
+            }
+        }
     }
 }
