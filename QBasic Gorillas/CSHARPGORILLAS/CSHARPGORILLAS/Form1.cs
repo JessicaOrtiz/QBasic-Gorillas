@@ -15,7 +15,8 @@ namespace CSHARPGORILLAS
 {
     public partial class Form1 : Form
     {
-        
+
+        List<Rectangle> colisiones = new List<Rectangle>();
         int tiempo = 0;
         int jugador = 1;
         List<Image> listEdificios = new List<Image>();
@@ -234,7 +235,7 @@ namespace CSHARPGORILLAS
             var seed = Environment.TickCount;
             var random = new Random(seed);
 
-            while(posSol == posSol2)
+            while(posSol == posSol2 || posSol>posSol2)
             {
                 posSol = random.Next(1, (int)ancho / tamImagen);
                 posSol2 = random.Next(1, (int)ancho / tamImagen);
@@ -256,9 +257,9 @@ namespace CSHARPGORILLAS
                     PictureBox picS1 = new PictureBox();
                     Image imgS1;
                     if (posSol > posSol2)
-                         imgS1= Image.FromFile(dir + @"\Personajes\soldado2.png");
+                         imgS1= Image.FromFile(dir + @"\Personajes\soldado izq.png");
                     else
-                         imgS1 = Image.FromFile(dir + @"\Personajes\soldado.png");
+                         imgS1 = Image.FromFile(dir + @"\Personajes\soldado dere.png");
                     picS1.Name = "PicS1";
                     picS1.Size = new Size(28, 36);
                     picS1.Location = new Point(posicion(i)+30, this.Height - (tamImagen + tam)-36);
@@ -271,9 +272,9 @@ namespace CSHARPGORILLAS
                    /* PictureBox picS2 = new PictureBox();
                     Image imgS2;*/
                     if (posSol < posSol2)
-                        imgS2 = Image.FromFile(dir + @"\Personajes\soldado2.png");
+                        imgS2 = Image.FromFile(dir + @"\Personajes\soldado izq.png");
                     else
-                        imgS2 = Image.FromFile(dir + @"\Personajes\soldado.png");
+                        imgS2 = Image.FromFile(dir + @"\Personajes\soldado dere.png");
                     picS2.Name = "PicS2";
                     picS2.Size = new Size(28, 36);
                     picS2.Location = new Point(posicion(i) + 37, this.Height - (tamImagen + tam) - 36);
@@ -480,20 +481,27 @@ namespace CSHARPGORILLAS
                 if (jugador ==  1) {
                     PictureBox SOL= new PictureBox();
                     SOL = this.Controls.OfType<PictureBox>().FirstOrDefault(x => x.Name == "PicS1");
-                    Xr = auxX + SOL.Location.X;
-                    Yr= auxY + SOL.Location.Y;
+                    Xr = auxX+SOL.Location.X;
+                    Yr= SOL.Location.Y - auxY;
                 }
                 else
                 {
                     PictureBox SOL = new PictureBox();
                     SOL = this.Controls.OfType<PictureBox>().FirstOrDefault(x => x.Name == "PicS2");
-                    Xr = auxX + SOL.Location.X;
-                    Yr = auxY + SOL.Location.Y;
+                    Xr = SOL.Location.X-auxX;
+                    Yr = SOL.Location.Y - auxY;
                 }
-                
+
                 PB1.Location = new Point(Xr, Yr);
-                PB1.Visible = true;
-                CONTADOR += 1;
+                //if (colision(PB1) == 0)
+                //{
+                    PB1.Visible = true;
+                    CONTADOR += 1;
+                //}
+                //else
+                //{
+                    timer2.Stop();
+                //}
             }
             else
             {
@@ -510,9 +518,17 @@ namespace CSHARPGORILLAS
         {
             if ((Keys)e.KeyChar == Keys.Enter)
             {
+                Image img;
                 CALCULAR_TIEMPO_DESPLAZAMIENTOX();
                 PictureBox bala = new PictureBox();
-                Image img = Image.FromFile(Directory.GetCurrentDirectory() + @"\edificios\Edificio1.png");
+                if (jugador == 2)
+                {
+                    img = Image.FromFile(Directory.GetCurrentDirectory() + @"\Personajes\Bala.png");
+                }
+                else
+                {
+                    img = Image.FromFile(Directory.GetCurrentDirectory() + @"\Personajes\Bala derecha.png");
+                }
                 bala.Name = "bala";
                 bala.Size = new Size(75, 75);
                 bala.Image = new System.Drawing.Bitmap(img);
@@ -521,6 +537,66 @@ namespace CSHARPGORILLAS
                 this.Controls.Add(bala);
                 timer2.Start();
             }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            System.Drawing.Graphics graphicsObj;
+            graphicsObj = this.CreateGraphics();
+
+            for (int i = 0; i < colisiones.Count; i++)
+            {
+
+                Pen myPen = new Pen(System.Drawing.Color.Green, 5);
+                graphicsObj.DrawEllipse(myPen, colisiones[i]);
+            }
+        }
+
+        private int  colision(PictureBox pb)
+        {
+            
+            for(int i = 0; i < colisiones.Count; i++)
+            {
+                PictureBox PB1 = new PictureBox();
+                PictureBox PS1 = new PictureBox();
+                PictureBox PS2 = new PictureBox();
+                PB1 = this.Controls.OfType<PictureBox>().FirstOrDefault(x => x.Name == "Edificio"+i.ToString());
+                PS1 = this.Controls.OfType<PictureBox>().FirstOrDefault(x => x.Name == "PicS1");
+                PS2 = this.Controls.OfType<PictureBox>().FirstOrDefault(x => x.Name == "PicS2");
+
+                if (pb.DisplayRectangle.IntersectsWith(PB1.DisplayRectangle))
+                {
+                    //COLOCAR EL RENTANGULO
+                    //AÑADIRLO A LA LISTA
+                    this.Controls.Remove(pb);
+                    Invalidate();
+                    return 1;
+                    
+                }
+                else if(pb.DisplayRectangle.IntersectsWith(PS1.DisplayRectangle))
+                {
+                    //COLOCAR EL RENTANGULO
+                    //AÑADIRLO A LA LISTA
+                    this.Controls.Remove(pb);
+                    Invalidate();
+                    return 1;
+
+                }else if (pb.DisplayRectangle.IntersectsWith(PS2.DisplayRectangle))
+                {
+                    //COLOCAR EL RENTANGULO
+                    //AÑADIRLO A LA LISTA
+                    this.Controls.Remove(pb);
+                    Invalidate();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+
+            
+            return 0;
         }
     }
 }
